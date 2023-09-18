@@ -1,9 +1,9 @@
 # Cloud DevOps Engineer Capstone Project
 
 This project represents the successful completion of the last final Capstone project and the Cloud DevOps Engineer Nanodegree at Udacity.
-- Github: https://github.com/ttnguyen115/devops-capstone-submission
-- Docker: https://hub.docker.com/repository/docker/ttnguyen115/uda-capstone/general
-- CircleCI: [![CircleCI](https://circleci.com/gh/circleci/circleci-docs.svg?style=svg)](https://app.circleci.com/pipelines/github/ttnguyen115/devops-capstone-submission)
+- Github: https://github.com/NguyenThanhKien/UdacityProject5
+- Docker: https://hub.docker.com/repository/docker/kiennt65/uda-capstone/general
+- CircleCI: [![CircleCI](https://circleci.com/gh/circleci/circleci-docs.svg?style=svg)](https://app.circleci.com/pipelines/github/NguyenThanhKien/UdacityProject5)
 ## What did I learn?
 
 In this project, I applied the skills and knowledge I developed throughout the Cloud DevOps Nanodegree program. These include:
@@ -49,16 +49,16 @@ This process makes sure that the code quality is always as good as possible.
 
 #### This is the output when the step fails:
 
-![Linting step fail](./[SCREENSHOT_LINT_FAIL].png)
+![Linting step fail](./Screenshot01.png)
 
 
 #### This is the output when the step passes:
 
-![Linting step fail](./[SCREENSHOT_LINT_SUCCESS].png)
+![Linting step success](./Screenshot02.png)
 
 ## Upload Docker Image After Successful Build
 
-![Upload Docker](./dockerhub.png)
+![Upload Docker](./Screenshot05.png)
 
 ## Access the Application
 
@@ -66,11 +66,11 @@ After the EKS-Cluster has been successfully configured using Ansible within the 
 
 ```
     ##TASK [Get deployment] **********************************************************
-    changed: [3.81.98.207] => {
+    changed: [3.84.75.71] => {
         "changed": true,
         "cmd": "./bin/kubectl get deployments",
-        "delta": "0:00:00.896526",
-        "end": "2023-08-17 16:07:30.639577",
+        "delta": "0:00:00.882867",
+        "end": "2023-09-18 14:15:07.217478",
         "invocation": {
             "module_args": {
                 "_raw_params": "./bin/kubectl get deployments",
@@ -88,7 +88,7 @@ After the EKS-Cluster has been successfully configured using Ansible within the 
         },
         "msg": "",
         "rc": 0,
-        "start": "2023-08-17 16:07:29.743051",
+        "start": "2023-09-18 14:15:06.334611",
         "stderr": "",
         "stderr_lines": [],
         "stdout": "NAME                          READY   UP-TO-DATE   AVAILABLE   AGE\n****************-deployment   2/2     2            2           2m45s",
@@ -99,11 +99,11 @@ After the EKS-Cluster has been successfully configured using Ansible within the 
     }
 
     ##TASK [Get service] *************************************************************
-    changed: [3.81.98.207] => {
+    changed: [3.84.75.71] => {
         "changed": true,
         "cmd": "./bin/kubectl get services",
-        "delta": "0:00:00.868470",
-        "end": "2023-08-17 16:07:31.838327",
+        "delta": "0:00:00.870097",
+        "end": "2023-09-18 14:15:08.408764",
         "invocation": {
             "module_args": {
                 "_raw_params": "./bin/kubectl get services",
@@ -121,18 +121,19 @@ After the EKS-Cluster has been successfully configured using Ansible within the 
         },
         "msg": "",
         "rc": 0,
-        "start": "2023-08-17 16:07:30.969857",
+        "start": "2023-09-18 14:15:07.538667",
         "stderr": "",
         "stderr_lines": [],
-        "stdout": "NAME                       TYPE           CLUSTER-IP      EXTERNAL-IP                                                               PORT(S)        AGE\n****************-service   LoadBalancer   10.100.28.192   af5eb4d7bd90a49779543a8c8d67dfd7-1658854124.*********.elb.amazonaws.com   80:32682/TCP   2m44s\nkubernetes                 ClusterIP      10.100.0.1      <none>                                                                    443/TCP        12m",
+        "stdout": "NAME                       TYPE           CLUSTER-IP       EXTERNAL-IP                                                              PORT(S)        AGE\n****************-service   LoadBalancer   10.100.205.248   a358153a6c91e45d6a00bb7d52d496bd-581159694.*********.elb.amazonaws.com   80:32130/TCP   2m44s\nkubernetes                 ClusterIP      10.100.0.1       <none>                                                                   443/TCP        13m",
         "stdout_lines": [
-            "NAME                       TYPE           CLUSTER-IP      EXTERNAL-IP                                                               PORT(S)        AGE",
-            "****************-service   LoadBalancer   10.100.28.192   af5eb4d7bd90a49779543a8c8d67dfd7-1658854124.*********.elb.amazonaws.com   80:32682/TCP   2m44s",
-            "kubernetes                 ClusterIP      10.100.0.1      <none>                                                                    443/TCP        12m"
+            "NAME                       TYPE           CLUSTER-IP       EXTERNAL-IP                                                              PORT(S)        AGE",
+            "****************-service   LoadBalancer   10.100.205.248   a358153a6c91e45d6a00bb7d52d496bd-581159694.*********.elb.amazonaws.com   80:32130/TCP   2m44s",
+            "kubernetes                 ClusterIP      10.100.0.1       <none>                                                                   443/TCP        13m"
         ]
-    }   
+    }
+ 
 ```
 
-Public LB DNS: http://af5eb4d7bd90a49779543a8c8d67dfd7-1658854124.us-east-1.elb.amazonaws.com/\
+Public LB DNS: http://a358153a6c91e45d6a00bb7d52d496bd-581159694.us-east-1.elb.amazonaws.com/
 
-![Access LB DNS](./elb_url.png)
+![Access LB DNS](./Screenshot03.png)
