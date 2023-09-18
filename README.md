@@ -29,10 +29,10 @@ The CloudFormation Deployment can be broken down into four Parts:
 - **Toggle** is needed to configure and manage the Cluster and its deployments and services. I created two management hosts for extra redundancy if one of them fails.
 
 #### List of deployed Stacks:
-![CloudFormation](./cloudformation_stacks.png)
+![CloudFormation](./Screenshot06.png)
 
 #### List of deployed Instances:
-![Show Instances](./ec2_instances.png)
+![Show Instances](./Screenshot07.png)
 
 ## CircleCi - CI/CD Pipelines
 
@@ -40,7 +40,7 @@ I used CircleCi to create a CI/CD Pipeline to test and deploy changes manually b
 
 #### From Zero to Hero demonstration:
 
-![CircleCi Pipeline](./circleci_pipeline_success.png)
+![CircleCi Pipeline](./Screenshot04.png)
 
 ## Linting using Pylint and Hadolint
 
