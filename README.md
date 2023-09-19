@@ -60,6 +60,13 @@ This process makes sure that the code quality is always as good as possible.
 
 ![Upload Docker](./Screenshot05.png)
 
+
+#### This is the output Kubectl for deployment after successful:
+
+![Get deployment](./Screenshot08.png)
+
+![Get service](./Screenshot09.png)
+
 ## Access the Application
 
 After the EKS-Cluster has been successfully configured using Ansible within the CI/CD Pipeline, I checked the deployment and service log on pipeline as follows:
